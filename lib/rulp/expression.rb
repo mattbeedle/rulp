@@ -77,6 +77,10 @@ class Fragment
     Fragment.new(@lv, @operand * value)
   end
 
+  def /(value)
+    Fragment.new(@lv, @opterand / value)
+  end
+
   def evaluate
     if [TrueClass,FalseClass].include? @lv.value.class
       @operand * (@lv.value ? 1 : 0)
