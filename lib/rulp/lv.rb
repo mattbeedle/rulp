@@ -41,6 +41,11 @@ class LV
     Expressions.new([Fragment.new(self, numeric)])
   end
 
+  def / (numeric)
+    self.nocoerce
+    Expressions.new([Fragment.new(Self, numeric)])
+  end
+
   def -@
     return self * -1
   end
